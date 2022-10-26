@@ -1,14 +1,14 @@
-package com.lewisxiao.training.chapter03.oo.clazz;
+package com.lewisxiao.training.chapter03.oo.clazz.interfaces;
 
 /**
- * 地点类
+ * 城市类
  *
  * @author xiaoweiqian
  * @date 2022/9/27 14:42
  */
-public class Site {
+public abstract class City {
     /**
-     * 名称
+     * 城市名称
      */
     private String name;
 
@@ -23,20 +23,15 @@ public class Site {
     /**
      * 默认构造函数
      */
-    public Site() {
+    public City() {
         this("未知城市");
     }
 
-    public Site(String name) {
+    public City(String name) {
         this.name = name;
     }
 
-    /**
-     * 打印当地美食
-     */
-    protected void printFood() {
-        System.out.println("一片荒地，没有美食");
-    }
+    protected abstract void belongProvince();
 
     @Override
     public String toString() {

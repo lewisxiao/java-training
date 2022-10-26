@@ -1,12 +1,13 @@
 package com.lewisxiao.training.chapter03.oo.clazz;
 
-public class Demo {
+public class ClazzDemo {
     public static void main(String[] args) {
         Xian xian = new Xian();
+        xian.setProvinceName("陕西省");
         xian.setName("西安");
-        xian.printFood();
-
-        Xian.belongProvince();
+        xian.belongProvince();
+        xian.printAllSpot();
+        xian.printAllFood();
 
         // 整数传值调用
         int aInt = 1;
@@ -18,9 +19,12 @@ public class Demo {
         // 对象传值调用
         Xian a = new Xian();
         a.setName("西安1号");
+        a.setProvinceName("陕西1号");
 
         Xian b = new Xian();
         b.setName("西安2号");
+        b.setProvinceName("陕西2号");
+        swap(a, b);
 
         System.out.println("a = " + a);
         System.out.println("b = " + b);
